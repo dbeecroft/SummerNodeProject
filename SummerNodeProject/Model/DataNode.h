@@ -18,6 +18,10 @@ private:
     Type nodeData;
     DataNode * nodePointer; // '*' symbol for pointer
 public:
+    // constructors
+    DataNode();
+    DataNode(Type nodeData);
+    
     // getter and setter
     void setNodeData (Type nodeData);
     void setNodePointer (DataNode * nodePointer);
