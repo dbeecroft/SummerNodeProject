@@ -18,7 +18,6 @@ private:
     Type nodeData;
     DataNode * nodePointer; // '*' symbol for pointer
 public:
-    // constructors
     DataNode();
     DataNode(Type nodeData);
     
