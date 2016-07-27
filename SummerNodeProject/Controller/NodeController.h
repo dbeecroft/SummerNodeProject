@@ -1,5 +1,5 @@
 //
-//  NodeController.hpp
+//  NodeController.h
 //  SummerNodeProject
 //
 //  Created by Denise Beecroft on 7/26/16.
