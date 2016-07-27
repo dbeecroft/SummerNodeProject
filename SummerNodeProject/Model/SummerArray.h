@@ -30,7 +30,8 @@ public:
     
     void sort();
     void resize(int newSize);
-                int getUnusedNodes();
+    int getUnusedNodes();
+    int getLength();
     
 };
 

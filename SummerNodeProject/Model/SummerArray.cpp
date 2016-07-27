@@ -80,3 +80,9 @@ void SummerArray<Type> :: setAtIndex(int index, Type data)
     
     indexPointer->setNodeData(data);
 }
+
+template <class Type>
+int SummerArray<Type> :: getLength()
+{
+    return this->length;
+}
