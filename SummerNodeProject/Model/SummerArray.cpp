@@ -6,4 +6,4 @@
 //  Copyright © 2016 Denise Beecroft. All rights reserved.
 //
 
-#include "SummerArray.hpp"
+#include "SummerArray.h"
