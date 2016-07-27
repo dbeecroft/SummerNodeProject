@@ -16,10 +16,10 @@ template <class Type>
 class SummerArray
 {
 private:
-    int lenth;
+    int length;
     bool * modifiedNodes;
-    DataNode<Type> front;
-    DataNode<Type> end;
+    DataNode<Type> * front;
+    DataNode<Type> * end;
 public:
     SummerArray(int length);
     

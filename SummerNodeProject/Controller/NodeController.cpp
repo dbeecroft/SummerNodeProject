@@ -25,7 +25,12 @@ void NodeController :: tryNodes()
     cout << numberNode.getNodeData() << endl;
 }
 
+void NodeController :: tryArray()
+{
+    SummerArray<int> testArray(3);
+}
+
 void NodeController :: start()
 {
-    tryNodes();
+    tryArray();
 }
