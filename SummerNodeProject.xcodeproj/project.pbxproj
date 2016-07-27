@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A4BB457E1D4907FA004AD8C5 /* SummerArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4BB457C1D4907FA004AD8C5 /* SummerArray.cpp */; };
+		A4BB45811D4944BA004AD8C5 /* SummerList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4BB457F1D4944BA004AD8C5 /* SummerList.cpp */; };
 		A4DCB4071D47FE12005C611B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4DCB4061D47FE12005C611B /* main.cpp */; };
 		A4DCB40F1D47FFC1005C611B /* DataNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4DCB40D1D47FFC1005C611B /* DataNode.cpp */; };
 		A4DCB4131D480C9E005C611B /* NodeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4DCB4111D480C9E005C611B /* NodeController.cpp */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		A4BB457C1D4907FA004AD8C5 /* SummerArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SummerArray.cpp; path = Model/SummerArray.cpp; sourceTree = "<group>"; };
 		A4BB457D1D4907FA004AD8C5 /* SummerArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummerArray.h; path = Model/SummerArray.h; sourceTree = "<group>"; };
+		A4BB457F1D4944BA004AD8C5 /* SummerList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SummerList.cpp; path = Model/SummerList.cpp; sourceTree = "<group>"; };
+		A4BB45801D4944BA004AD8C5 /* SummerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummerList.h; path = Model/SummerList.h; sourceTree = "<group>"; };
 		A4DCB4031D47FE12005C611B /* SummerNodeProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SummerNodeProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4DCB4061D47FE12005C611B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A4DCB40D1D47FFC1005C611B /* DataNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataNode.cpp; path = Model/DataNode.cpp; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 				A4DCB40E1D47FFC1005C611B /* DataNode.h */,
 				A4BB457C1D4907FA004AD8C5 /* SummerArray.cpp */,
 				A4BB457D1D4907FA004AD8C5 /* SummerArray.h */,
+				A4BB457F1D4944BA004AD8C5 /* SummerList.cpp */,
+				A4BB45801D4944BA004AD8C5 /* SummerList.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				A4BB457E1D4907FA004AD8C5 /* SummerArray.cpp in Sources */,
 				A4DCB4131D480C9E005C611B /* NodeController.cpp in Sources */,
 				A4DCB4071D47FE12005C611B /* main.cpp in Sources */,
+				A4BB45811D4944BA004AD8C5 /* SummerList.cpp in Sources */,
 				A4DCB40F1D47FFC1005C611B /* DataNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
