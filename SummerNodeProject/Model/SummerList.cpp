@@ -7,3 +7,14 @@
 //
 
 #include "SummerList.h"
+#include <assert.h>
+
+template<class Type>
+SummerList<Type> :: SummerList()
+{
+    // Constructors
+    size = 0;
+    front = nullptr;
+    end = nullptr;
+}
+
