@@ -25,17 +25,34 @@ void SummerList<Type> :: addAtIndex(int index, Type data)
     // Different from array - we can add to the end.
     DataNode<Type> * indexPointer = front;
     
-    // Get to the spot before the spot I am adding to.
-    for(int position = 0; position < index - 1; position++)
-    {
-        indexPointer = indexPointer->getNodePointer();
-    }
-    
     // Create a node
     DataNode<Type> * newNode = new DataNode<Type>(data); // same as line 39 and 40
     
-    newNode->setNodePointer(indexPointer->getNodePointer());
+    if(index == 0)
+    {
+        newNode->setNodePointer(indexPointer);
+        front = newNode;
+    }
+    else if(index == size)
+    {
+        
+    }
+    else
+    {
+         // Get to the spot before the spot I am adding to.
+        for(int position = 0; position < index - 1; position++)
+        {
+            indexPointer = indexPointer->getNodePointer();
+        }
+        
+        //newNode->setNodePointer(indexPointer->getNodePointer()); Short hand version
+        
+        // Pointed newNode to the address of indexPointer's next node
+        DataNode<Type> * temp = indexPointer->getNodePointer();
+        newNode->setNodePointer(temp);
+        
+        // Setting indexPointer to point to the newNode's address
+        indexPointer->setNodePointer(newNode);
+    }
     
-    //DataNode<Type> * temp = indexPointer->getNodePointer();
-    //newNode->setNodePointer(temp);
 }
