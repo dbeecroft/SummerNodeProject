@@ -7,10 +7,13 @@
 //
 
 #include "SummerArray.h"
+#include <assert.h>
 
 template<class Type>
 SummerArray<Type> :: SummerArray(int length)
 {
+    assert(length > 0);
+    
     this->length = length;
     modifiedNodes = new bool [length];
     front = nullptr;
@@ -25,5 +28,10 @@ SummerArray<Type> :: SummerArray(int length)
         DataNode<Type> * next = new DataNode<Type>();
         end->setNodePointer(next);
         end = next;
+    }
+    
+    for(int index = 0; index < length; index++)
+    {
+        modifiedNodes[index] = false;
     }
 }
