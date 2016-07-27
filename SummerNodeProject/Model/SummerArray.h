@@ -1,5 +1,5 @@
 //
-//  SummerArray.hpp
+//  SummerArray.h
 //  SummerNodeProject
 //
 //  Created by Henrichsen, Cody on 7/27/16.
