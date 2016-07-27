@@ -88,3 +88,32 @@ void SummerList<Type> :: addAtFront(Type data)
         front = newNode;
     }
 }
+
+template <class Type>
+Type SummerList<Type> :: remove(int index)
+{
+    assert(index >= 0 && index < size);
+    
+    Type removedValue;
+    
+    DataNode<Type> * indexPointer = front;
+    DataNode<Type> * removedNode = nullptr;
+    DataNode<Type> * next = nullptr;
+    
+    for(int position = 0; position < index - 1; position++)
+    {
+        indexPointer = indexPointer->getNodePointer();
+    }
+    
+    removedNode= indexPointer->getNodePointer();
+    next = removedNode->getNodePointer();
+    
+    indexPointer->setNodePointer(next);
+    removedNode->setNodePoionter(nullptr);
+    
+    removedValue = removedNode->getNodeData();
+    
+    delete removedNode;
+    
+    return removedValue;
+}
