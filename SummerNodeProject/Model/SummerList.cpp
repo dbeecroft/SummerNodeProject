@@ -52,6 +52,8 @@ void SummerList<Type> :: addAtIndex(int index, Type data)
         
         // Setting indexPointer to point to the newNode's address
         indexPointer->setNodePointer(newNode);
+        
+        size++;
     }
  }
 
@@ -69,6 +71,7 @@ void SummerList<Type> :: add(Type data)
         end->setNodePointer(newNode);
         end = newNode;
     }
+    size++;
 }
 
 
@@ -87,6 +90,7 @@ void SummerList<Type> :: addAtFront(Type data)
         newNode->setNodePointer(front);
         front = newNode;
     }
+    size++;
 }
 
 template <class Type>
@@ -100,20 +104,47 @@ Type SummerList<Type> :: remove(int index)
     DataNode<Type> * removedNode = nullptr;
     DataNode<Type> * next = nullptr;
     
-    for(int position = 0; position < index - 1; position++)
+    if(size == 1)
     {
-        indexPointer = indexPointer->getNodePointer();
+        removedValue = front->getNodeData();
+        
+        delete indexPointer;
+        
+        front = nullptr;
+        end = nullptr;
+    }
+    else if(index == 0)
+    {
+        removedValue = front->getNodeData();
+        
+        front = front->getNodePointer();
+        
+        delete indexPointer;
+    }
+    else
+    {
+        for(int position = 0; position < index - 1; position++)
+        {
+            indexPointer = indexPointer->getNodePointer();
+        }
+        
+        removedNode= indexPointer->getNodePointer();
+        next = removedNode->getNodePointer();
+        
+        if(removedNode == end)
+        {
+            end = indexPointer;
+        }
+        
+        indexPointer->setNodePointer(next);
+        removedNode->setNodePoionter(nullptr);
+        
+        removedValue = removedNode->getNodeData();
+        
+        delete removedNode;
     }
     
-    removedNode= indexPointer->getNodePointer();
-    next = removedNode->getNodePointer();
     
-    indexPointer->setNodePointer(next);
-    removedNode->setNodePoionter(nullptr);
-    
-    removedValue = removedNode->getNodeData();
-    
-    delete removedNode;
     
     return removedValue;
 }
