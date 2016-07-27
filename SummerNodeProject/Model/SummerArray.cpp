@@ -35,3 +35,14 @@ SummerArray<Type> :: SummerArray(int length)
         modifiedNodes[index] = false;
     }
 }
+
+template <class Type>
+Type SummerArray<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0);
+    assert(index < length);
+    
+    Type retrievedValue;
+    
+    return retrievedValue;
+}
