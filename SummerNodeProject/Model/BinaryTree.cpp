@@ -85,7 +85,7 @@ void BinaryTree<Type> :: calculateSize(BinaryTreeNode<Type> * currentNode)
 {
     if(currentNode != nullptr)
     {
-        calculateSie(currentNode->getLeftChild());
+        calculateSize(currentNode->getLeftChild());
         calculateSize(currentNode->getRightChild());
         size++;
     }
