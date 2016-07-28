@@ -2,7 +2,7 @@
 //  BinaryTree.h
 //  SummerNodeProject
 //
-//  Created by Henrichsen, Cody on 7/28/16.
+//  Created by Denise Beecroft on 7/28/16.
 //  Copyright © 2016 Denise Beecroft. All rights reserved.
 //
 
@@ -17,6 +17,7 @@ class BinaryTree
 {
 private:
     BinaryTreeNode<Type> * root;
+    void insert(BinaryTreeNode<Type> * insertedNode, BinaryTreeNode<Type> * currentRootNode);
 public:
     BinaryTree();
     void insert(Type data);
@@ -27,4 +28,4 @@ public:
     bool remove(Type data);
 };
 
-#endif /* BinaryTree_hpp */
+#endif /* BinaryTree_h */
