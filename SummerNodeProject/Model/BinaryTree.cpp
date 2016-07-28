@@ -80,3 +80,21 @@ BinaryTreeNode<Type> * BinaryTree<Type> :: getRoot()
     return root;
 }
 
+template <class Type>
+void BinaryTree<Type> :: calculateSize(BinaryTreeNode<Type> * currentNode)
+{
+    if(currentNode != nullptr)
+    {
+        calculateSie(currentNode->getLeftChild());
+        calculateSize(currentNode->getRightChild());
+        size++;
+    }
+}
+
+template <class Type>
+int BinaryTree<Type> :: getSize()
+{
+    size = 0;
+    calculateSize(root);
+    return size;
+}
