@@ -44,15 +44,15 @@ void NodeController :: tryTree()
     sampleTree.insert(1231234);
     sampleTree.insert(0);
     
-    cout << "The in order traversal" << endl;
+    cout << "The in order traversal:" << endl;
     sampleTree.inOrderTraversal(sampleTree.getRoot());
     cout << endl;
     
-    cout << "The pre order traversal" << endl;
+    cout << "The pre order traversal:" << endl;
     sampleTree.preOrderTraversal(sampleTree.getRoot());
     cout << endl;
     
-    cout << "The post order traversal" << endl;
+    cout << "The post order traversal:" << endl;
     sampleTree.postOrderTraversal(sampleTree.getRoot());
     cout << endl;
 }
