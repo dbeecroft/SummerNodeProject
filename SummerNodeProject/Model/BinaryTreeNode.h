@@ -2,7 +2,7 @@
 //  BinaryTreeNode.hpp
 //  SummerNodeProject
 //
-//  Created by Henrichsen, Cody on 7/28/16.
+//  Created by Denise Beecroft on 7/28/16.
 //  Copyright © 2016 Denise Beecroft. All rights reserved.
 //
 
