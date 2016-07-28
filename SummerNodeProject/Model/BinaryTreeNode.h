@@ -15,7 +15,21 @@
 template <class Type>
 class BinaryTreeNode : public DataNode<Type>
 {
+private:
+    BinaryTreeNode<Type> * leftChild;
+    BinaryTreeNode<Type> * rightChild;
+    BinaryTreeNode<Type> * parent;
+public:
+    BinaryTreeNode();
+    BinaryTreeNode<Type>(Type data);
     
+    BinaryTreeNode<Type> * getLeftChild();
+    BinaryTreeNode<Type> * getRightChild();
+    BinaryTreeNode<Type> * getParent();
+    
+    void setRightChild(BinaryTreeNode<Type> * rightChild);
+    void setLeftChild(BinaryTreeNode<Type> * leftChild);
+    void setParent(BinaryTreeNode<Type> * parent);
 };
 
 

@@ -7,3 +7,17 @@
 //
 
 #include "BinaryTreeNode.h"
+
+template<class Type>
+BinaryTreeNode<Type> :: BinaryTreeNode() : DataNode<Type>()
+{
+    parent = nullptr;
+    leftChild = nullptr;
+    rightChild = nullptr;
+}
+
+template <class Type>
+BinaryTreeNode<Type> :: BinaryTreeNode(Type data) : DataNode<Type>(data)
+{
+    
+}
