@@ -52,3 +52,26 @@ void BinaryTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNode)
         inOrderTraversal(currentNode->getRightChild());
     }
 }
+
+template <class Type>
+void BinaryTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * currentNode)
+{
+    if(currentNode != nullptr)
+    {
+        cout << currentNode->getNodeData() << ", ";
+        preOrderTraversal(currentNode->getLeftChild());
+        preOrderTraversal(currentNode->getRightChild());
+    }
+}
+
+template <class Type>
+void BinaryTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * currentNode)
+{
+    if(currentNode != nullptr)
+    {
+        postOrderTraversal(currentNode->getLeftChild());
+        postOrderTraversal(currentNode->getRightChild());
+        cout << currentNode->getNodeData() << ", ";
+    }
+}
+
