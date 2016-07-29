@@ -7,6 +7,8 @@
 //
 
 #include "HashTable.h"
+#include <iostream>
+using namespace std;
 
 template <class Type>
 HashTable<Type> :: HashTable()
@@ -52,7 +54,7 @@ long HashTable<Type> :: findPosition(Type data)
 {
     long insertedPosition;
     
-    unsigned long address = &data;
+    unsigned long address = (long)&data;
     
     insertedPosition = address % capacity;
     HashNode<Type> * indexPointer = front;
@@ -62,11 +64,69 @@ long HashTable<Type> :: findPosition(Type data)
         indexPointer = indexPointer->getNode();
     }
     
-    if(indexPointer->isStuffed())
+    if(indexPointer->hasStuffed())
     {
-        insertedPosition = handleCollision(data);
+        insertedPosition = handleCollision(data, insertedPosition);
     }
     
     
     return insertedPosition;
+}
+
+template<class Type>
+long HashTable<Type> :: handleCollision (Type data, long currentPosition)
+{
+    long updatedPosition = -1;
+    
+    HashNode<Type> * indexPointer = front;
+    
+    for (long index = 1; index < currentPosition +1; index++)
+    {
+        indexPointer = indexPointer->getNode();
+    }
+    
+    for (long index = currentPosition + 1; index < capacity && updatedPosition == -1; index++)
+    {
+        if(!indexPointer->hasStuffed())
+        {
+            updatedPosition =index;
+        }
+        indexPointer = indexPointer->getNode();
+    }
+    
+    if (updatedPosition == -1)
+    {
+        indexPointer = front;
+        for (long index = 0; index < currentPosition; index++)
+        {
+            if(!indexPointer->hasStuffed())
+            {
+                updatedPosition =index;
+            }
+            indexPointer = indexPointer->getNode();
+
+        }
+    }
+    
+    return updatedPosition;
+}
+
+template <class Type>
+void HashTable<Type> :: resize()
+{
+    
+}
+
+template <class Type>
+void HashTable<Type> :: displayContents()
+{
+    HashNode<Type> * indexPointer = front;
+    for (long index = 0; index < capacity; index++)
+    {
+        if(indexPointer->hasStuffed())
+        {
+            cout << indexPointer->getData() << " # " << index << endl;
+        }
+        indexPointer = indexPointer->getNode();
+    }
 }
