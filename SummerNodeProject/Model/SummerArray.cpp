@@ -19,10 +19,15 @@ SummerArray<Type> :: SummerArray(int length)
     front = nullptr;
     end = nullptr;
     
+    //Creates a DataNode of the supplied Type with a pointer reference.
     DataNode<Type> * start = new DataNode<Type>();
+    //Sets the address of the start DataNode to front
     front = start;
+    //Sets the address of the start DataNode to end
     end = start;
     
+    
+    //Loops and creates new DataNodes for each of the array indicies
     for (int index = 1; index < length; index++)
     {
         DataNode<Type> * next = new DataNode<Type>();

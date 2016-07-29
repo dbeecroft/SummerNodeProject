@@ -2,7 +2,7 @@
 //  HashNode.cpp
 //  SummerNodeProject
 //
-//  Created by Henrichsen, Cody on 7/29/16.
+//  Created by Denise Beecroft on 7/29/16.
 //  Copyright © 2016 Denise Beecroft. All rights reserved.
 //
 
@@ -19,7 +19,7 @@ template <class Type>
 HashNode<Type> :: HashNode(Type data)
 {
     this->data = data;
-    isStuffed = false;
+    isStuffed = true;
     nextNode = nullptr;
 }
 
