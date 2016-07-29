@@ -47,3 +47,26 @@ void HashTable<Type> :: add(Type data)
     indexPointer->setData(data);
     indexPointer->setStuffed(true);
 }
+template<class Type>
+long HashTable<Type> :: findPosition(Type data)
+{
+    long insertedPosition;
+    
+    unsigned long address = &data;
+    
+    insertedPosition = address % capacity;
+    HashNode<Type> * indexPointer = front;
+    
+    for(long index = 0; index < insertedPosition; index++)
+    {
+        indexPointer = indexPointer->getNode();
+    }
+    
+    if(indexPointer->isStuffed())
+    {
+        insertedPosition = handleCollision(data);
+    }
+    
+    
+    return insertedPosition;
+}
