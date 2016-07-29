@@ -17,7 +17,7 @@ class HashTable
 private:
     long capacity;
     long size;
-    double effciencyPercentage;
+    double efficiencyPercentage;
     HashNode<Type> * front;
     
     bool isPrime(int sampleNumber);
