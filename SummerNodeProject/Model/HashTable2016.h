@@ -14,7 +14,6 @@
 template<class Type>
 class HashTable
 {
-    
 };
 
 
